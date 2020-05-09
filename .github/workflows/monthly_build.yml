@@ -2,7 +2,7 @@ name: Monthly build
 
 on:
     schedule:
-        - cron: '0 2 1 * *'
+        - cron: '0 1 1 * *'
 
 jobs:
     publish:
@@ -14,7 +14,6 @@ jobs:
               ref: master
           - name: Monthly build
             uses: HurricanKai/Publish-Docker-Github-Action@master
-            if: contains(github.ref, 'refs/tags/')
             with:
               name: monolithprojects/systemd-ubuntu20
               username: monolithprojects
