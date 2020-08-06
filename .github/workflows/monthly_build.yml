@@ -20,3 +20,4 @@ jobs:
               password: ${{ secrets.TOKEN }}
               registry: docker.io
               dockerfile: Dockerfile
+              snapshot: true
